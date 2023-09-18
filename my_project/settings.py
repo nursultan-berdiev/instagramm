@@ -25,24 +25,7 @@ SECRET_KEY = 'django-insecure-6l-bykdvgew68m$b!s&pnek9n05=1!u_g=h*n2pb1^zq5l9b(9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-import os
-
-LOGGING = {
-    "version": 1,
-    "disable_existing_loggers": False,
-    "handlers": {
-        "console": {
-            "class": "logging.StreamHandler",
-        },
-    },
-    "root": {
-        "handlers": ["console"],
-        "level": "DEBUG",
-    },
-}
-
+ALLOWED_HOSTS = ['13.51.234.122', 'localhost', '127.0.0.1']
 
 # Application definition
 
@@ -96,25 +79,25 @@ WSGI_APPLICATION = 'my_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 import os
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'instagramm',
-        'HOST': 'localhost',
-        'PORT': '5433',
-        'USER': 'postgres',
-        'PASSWORD': os.environ.get('BD_PASSWORD')
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'instagramm',
+#         'HOST': 'localhost',
+#         'PORT': '5433',
+#         'USER': 'postgres',
+#         'PASSWORD': os.environ.get('BD_PASSWORD')
+#     }
+# }
 
 
 # Password validation
