@@ -96,7 +96,7 @@ DATABASES = {
         'HOST': env('DB_HOST'),
         'PORT': env('DB_PORT'),
         'USER': env('DB_USER'),
-        'PASSWORD': os.environ.get('BD_PASSWORD')
+        'PASSWORD': env('DB_PASSWORD')
     }
 }
 
